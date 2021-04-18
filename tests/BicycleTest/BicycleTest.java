@@ -1,13 +1,17 @@
 package BicycleTest;
 
+import bicycles.Bicycle;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BicycleTest {
     @Test
     public void shouldAccelerate() {
-        assertEquals(1,2);
+
+        Bicycle bicycle = new Bicycle();
+        bicycle.accelerate();
+        assertEquals(5, bicycle.currentSpeed());
     }
 
-    private void assertEquals(int i, int i1) {
-    }
+
 }
