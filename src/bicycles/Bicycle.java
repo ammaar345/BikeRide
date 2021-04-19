@@ -1,11 +1,10 @@
 package bicycles;
+interface Bicycle {
+     void accelerate();
+     void brake();
 
-public interface Bicycle {
-    public void accelerate();
-    public void brake();
+     int currentSpeed();
 
-    public int currentSpeed();
-
-    public void stop();
+     void stop();
 
 }
