@@ -1,5 +1,7 @@
 package bicycles;
 
+import models.RoadBike;
+
 public class BikeRide {
     public final Bicycle bicycle;
 public BikeRide(Bicycle bicycle1){
@@ -10,12 +12,13 @@ public BikeRide(Bicycle bicycle1){
 }
 
     public void ride(){
-        this.bicycle.accelerate();
-        this.bicycle.accelerate();
-        this.bicycle.accelerate();
-        this.bicycle.brake();
-        this.bicycle.brake();
-        this.bicycle.accelerate();
+//        this.bicycle.accelerate();
+//        this.bicycle.accelerate();
+//        this.bicycle.accelerate();
+//        this.bicycle.brake();
+//        this.bicycle.brake();
+//        this.bicycle.accelerate();
+
     }
 
     public void currentSpeed(){
@@ -23,10 +26,9 @@ public BikeRide(Bicycle bicycle1){
     }
 
     public static void main(String[] args) {
-        Bicycle bicycle =new Bicycle();
-        BikeRide bikeRide=new BikeRide(bicycle);
-        bikeRide.ride();
-        bikeRide.currentSpeed();
+//        Bicycle bicycle =new Bicycle();
+//        BikeRide bikeRide=new BikeRide(bicycle);
+//        bikeRide.ride();
 //        System.out.println(bikeRide.currentSpeed());
 
     }

@@ -1,6 +1,8 @@
-package bicycles;
+package models;
 
-public class RoadBike implements Bicycle{
+import bicycles.Bicycle;
+
+public class RoadBike implements Bicycle {
 private int speed;
     @Override
     public void accelerate() {
