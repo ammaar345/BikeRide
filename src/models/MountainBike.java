@@ -1,6 +1,6 @@
 package models;
 
-import bicycles.Bicycle;
+import models.Bicycle;
 
 public class MountainBike implements Bicycle {
     private int speed;
