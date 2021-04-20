@@ -1,5 +1,5 @@
 package models;
-interface Bicycle {
+public interface Bicycle {
     public void accelerate();
      public void brake();
 

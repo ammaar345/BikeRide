@@ -2,8 +2,9 @@ package bicycles;
 
 //import models.Bicycle;
 import models.RoadBike;
-
-public class BikeRide {
+import models.*;
+public interface BikeRide {
+ public void ride(Bicycle bicycle);
 //    public final Bicycle bicycle;
 //public BikeRide(Bicycle bicycle1){
 //    this.bicycle = bicycle1;
