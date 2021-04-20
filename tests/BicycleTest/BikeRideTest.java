@@ -44,7 +44,7 @@ assertEquals(roadBike.currentSpeed(),0);
         mountainBike.brake();
         mountainBike.brake();
         mountainBike.accelerate();
-        assertEquals(mountainBike.currentSpeed(),18);
+        assertEquals(mountainBike.currentSpeed(),9);
 //        RoadBike.accelerate();
     }
     @Test
@@ -52,7 +52,7 @@ assertEquals(roadBike.currentSpeed(),0);
         MountainBike mountainBike = new MountainBike();
         mountainBike.accelerate();
         mountainBike.accelerate();
-        assertEquals(mountainBike.currentSpeed(),44);
+        assertEquals(mountainBike.currentSpeed(),10);
     }
     @Test
     public void shouldTestStopMethodMtBike (){
