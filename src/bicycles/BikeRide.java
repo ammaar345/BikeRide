@@ -4,7 +4,7 @@ package bicycles;
 import models.RoadBike;
 import models.*;
 public interface BikeRide {
- public void ride(Bicycle bicycle);
+ void ride(Bicycle bicycle);
 //    public final Bicycle bicycle;
 //public BikeRide(Bicycle bicycle1){
 //    this.bicycle = bicycle1;
