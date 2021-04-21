@@ -1,6 +1,7 @@
-package models;
+package Rides;
 
 import bicycles.BikeRide;
+import models.Bicycle;
 
 public class BikeRideThree implements BikeRide {
     public void ride(Bicycle bicycle) {

@@ -2,18 +2,26 @@ package bicycles;
 import models.*;
 import bicycles.BicycleFromSpec;
 public  class BicycleFromSpec extends BicycleBase {
+    BicycleSpecification bicycleSpecification;
 
-  BicycleSpecification bicycleSpecification=new BicycleSpecification(0,0);
-
+   public BicycleFromSpec (BicycleSpecification bicycle) {
+       this.bicycleSpecification = bicycle;
+   }
     @Override
     public void accelerate() {
-        bicycleSpecification.getAccelerationSpeed();
+//        BicycleSpecification bicycleSpecification=new BicycleSpecification(0,0);
+
+
+    this.changeSpeed(this.bicycleSpecification.getAccelerationSpeed());
 
 
     }
 
     @Override
     public void brake() {
-        bicycleSpecification.getBrakeSpeed();
+
+//        BicycleSpecification bicycleSpecification=new BicycleSpecification(0,0);
+
+     this.changeSpeed(this.bicycleSpecification.getBrakeSpeed());
     }
 }
