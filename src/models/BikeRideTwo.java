@@ -2,18 +2,15 @@ package models;
 
 import bicycles.BikeRide;
 
-public abstract class BikeRideTwo implements BikeRide {
-  public  void ride (Bicycle RoadBike){
+public class BikeRideTwo implements BikeRide {
+    public void ride(Bicycle bicycle) {
 
-//      RoadBike roadBike = new RoadBike();
-      RoadBike.accelerate();
-      RoadBike.accelerate();
-      RoadBike.brake();
-      RoadBike.brake();
-      RoadBike.brake();
-      RoadBike.brake();
-System.out.println(RoadBike.currentSpeed());
-  }
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.accelerate();
+    }
 
 
 }

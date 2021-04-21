@@ -1,16 +1,15 @@
 package models;
-import bicycles.BikeRide;
-public abstract class BikeRideThree implements BikeRide{
-public  void ride (Bicycle MountainBike){
-//    MountainBike mountainBike = new MountainBike();
-    MountainBike.accelerate();
-    MountainBike.accelerate();
-    MountainBike.accelerate();
-    MountainBike.accelerate();
-    MountainBike.stop();
-    System.out.println(MountainBike.currentSpeed());
 
-}
+import bicycles.BikeRide;
+
+public class BikeRideThree implements BikeRide {
+    public void ride(Bicycle bicycle) {
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.brake();
+        bicycle.stop();
+
+    }
 
 
 }
