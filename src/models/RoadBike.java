@@ -3,12 +3,12 @@ package models;
 public class RoadBike extends BicycleBase {
 
     public void accelerate() {
-changeSpeed(+11);
+        changeSpeed(+11);
     }
 
 
     public void brake() {
-changeSpeed(-4);
+        changeSpeed(-4);
     }
 
 }
