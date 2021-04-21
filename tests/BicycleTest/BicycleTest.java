@@ -3,7 +3,7 @@ package BicycleTest;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import models.*;
-
+import bicycles.*;
 public class BicycleTest {
     @Test
     public void shouldTestBikeRideOneMountain() {
@@ -75,5 +75,24 @@ public class BicycleTest {
         bikeRideThree.ride(tandem);
         assertEquals(tandem.currentSpeed(), 0);
 
+    }
+
+    @Test
+   public void shouldBread(){
+        // RoadBike
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4);
+        Bicycle bicycle = new BicycleFromSpec(roadBikeSpec);
+
+        // use one of your classes that implements BikeRide
+        BikeRideOne bikeRideOne = new BikeRideOne(bicycle);
+        bikeRideOne.ride();
+
+        // MountainBike
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3);
+        Bicycle mountainBike = new BicycleFromSpec(mountainBikeSpec);
+
+        // use one of your classes that implements BikeRide
+        BikeRide mBikeRide = new YourBikeRideImplementationHere(mountainBike);
+        mBikeRide.ride();
     }
 }
