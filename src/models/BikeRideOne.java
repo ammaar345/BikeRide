@@ -2,15 +2,14 @@ package models;
 
 import bicycles.BikeRide;
 
-public abstract class BikeRideOne implements BikeRide {
+public class BikeRideOne implements BikeRide {
 
-    public  void ride(Bicycle Tandem) {
-       // Tandem tandem = new Tandem();
-        Tandem.accelerate();
-        Tandem.accelerate();
-        Tandem.brake();
-        Tandem.accelerate();
-        System.out.println(Tandem.currentSpeed());
+    public void ride(Bicycle bicycle) {
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.brake();
+        bicycle.accelerate();
 
     }
 
