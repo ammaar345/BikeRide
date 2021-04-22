@@ -18,4 +18,13 @@ public class BikeRideTwo implements BikeRide {
     }
 
 
+    @Override
+    public void ride() {
+
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.accelerate();
+    }
 }
