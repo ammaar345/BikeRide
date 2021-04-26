@@ -1,10 +1,14 @@
 package models;
+
+import bicycles.BicycleType;
+
 public interface Bicycle {
-    public void accelerate();
-     public void brake();
 
-     public     int currentSpeed();
-
-     public void stop();
+     void accelerate();
+      void brake();
+//BicycleType BicycleType();
+          int currentSpeed();
+ BicycleType getBicycleType();
+      void stop();
 
 }
