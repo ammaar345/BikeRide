@@ -7,6 +7,7 @@ public class BikeRideOne implements BikeRide {
     private Bicycle bicycle;
 
     public BikeRideOne(Bicycle bicycle) {
+
         this.bicycle= bicycle;
     }
 
