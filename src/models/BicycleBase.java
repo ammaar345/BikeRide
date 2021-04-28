@@ -1,10 +1,12 @@
 package models;
 
+import bicycles.BicycleType;
+
 public abstract class BicycleBase implements Bicycle {
     private int speed;
 
     protected void changeSpeed(int speedFactor) {
-speed=speed+speedFactor;
+        speed = speed + speedFactor;
 
     }
 
