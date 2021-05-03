@@ -7,6 +7,7 @@ public class FunRide {
     public int maxBikes;
     public BicycleType bicycleType;
 
+    //public int count;
     public FunRide(int max, BicycleType bicycleType) {
         this.maxBikes = max;
         this.bicycleType = bicycleType;
@@ -26,12 +27,19 @@ public class FunRide {
     }
 
     public BicycleType getCountForType(BicycleType bikeType) {
-//        if (//biketype){
-//            return //bikeTypeCount;
 //
+        if (bikeType == BicycleType.Tandem) {
+            return //bikeTypeCount;
+            // }
+            if (bikeType == BicycleType.RoadBike) {
+                return //bikeTypeCount;
+            }
+                if (bikeType == BicycleType.MountainBike) {
+                    return //bikeTypeCount;
+                }
 //        }etc..
 //
 //        return bikeType;
-    }
+                }
 
-}
+            }
