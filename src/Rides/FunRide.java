@@ -1,19 +1,24 @@
 package Rides;
 
 import bicycles.BicycleType;
+
 import java.util.*;
+
 public class FunRide {
     public int bikeCount;
     public int maxBikes;
     public int bikeCountForType;
 
-    private List<String> list = new ArrayList<String>();
+    private List<String> bikeList = new ArrayList<String>();
+
     public FunRide(int max) {
         this.maxBikes = max;
     }
 
 
-    public void accept() {
+    public void accept(String bikeSelected) {
+        //push bikeselected into the arraylist
+        bikeList.add(bikeSelected);
         if (bikeCount < maxBikes) {
             bikeCount++;
         } else {
@@ -23,25 +28,25 @@ public class FunRide {
 
     }
 
-    public int getCountForType(BicycleType bikeType) {
+    public int getCountForType(String typeOfBike) {
 //
-        if (bikeType == BicycleType.Tandem) {
-            this.bikeCountForType++;
-            return bikeCountForType;
+        List specificBikeList = new ArrayList<String>();
+        for (int i = 0; i < bikeList.size(); i++) {
+            if (typeOfBike == "Tandem") {
+                specificBikeList.add(typeOfBike);
+                return specificBikeList.size();
+            }
+
+            if (typeOfBike == "RoadBike") {
+                specificBikeList.add(typeOfBike);
+                return specificBikeList.size();
+            }
+            if (typeOfBike == "MountainBike") {
+                specificBikeList.add(typeOfBike);
+
+            }
         }
-        //bikeTypeCount;
-        // }
-        if (bikeType == BicycleType.RoadBike) {
-            this.bikeCountForType++;
-            return bikeCountForType;
-        }
-        if (bikeType == BicycleType.MountainBike) {
-            this.bikeCountForType++;
-            return bikeCountForType;
-        }
-//        }etc..
-//
-//        return bikeType;
+        return specificBikeList.size();
     }
 
     public int getEnteredCount() {
