@@ -1,18 +1,15 @@
 package Rides;
 
 import bicycles.BicycleType;
-
+import java.util.*;
 public class FunRide {
     public int bikeCount;
     public int maxBikes;
-    public BicycleType bicycleType;
+    public int bikeCountForType;
 
-    //public int count;
-    public FunRide(int max, BicycleType bicycleType) {
+    private List<String> list = new ArrayList<String>();
+    public FunRide(int max) {
         this.maxBikes = max;
-        this.bicycleType = bicycleType;
-
-
     }
 
 
@@ -26,20 +23,31 @@ public class FunRide {
 
     }
 
-    public BicycleType getCountForType(BicycleType bikeType) {
+    public int getCountForType(BicycleType bikeType) {
 //
         if (bikeType == BicycleType.Tandem) {
-            return //bikeTypeCount;
-            // }
-            if (bikeType == BicycleType.RoadBike) {
-                return //bikeTypeCount;
-            }
-                if (bikeType == BicycleType.MountainBike) {
-                    return //bikeTypeCount;
-                }
+            this.bikeCountForType++;
+            return bikeCountForType;
+        }
+        //bikeTypeCount;
+        // }
+        if (bikeType == BicycleType.RoadBike) {
+            this.bikeCountForType++;
+            return bikeCountForType;
+        }
+        if (bikeType == BicycleType.MountainBike) {
+            this.bikeCountForType++;
+            return bikeCountForType;
+        }
 //        }etc..
 //
 //        return bikeType;
-                }
+    }
 
-            }
+    public int getEnteredCount() {
+        return bikeCount;
+
+
+    }
+
+}
