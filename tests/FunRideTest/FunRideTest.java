@@ -12,7 +12,7 @@ public class FunRideTest {
         funRide.accept("Tandem");
         funRide.accept("Tandem");
         funRide.accept("Tandem");
-        System.out.println(funRide.getCountForType("Tandem"));
+        assertEquals(funRide.getCountForType("Tandem"), 3);
     }
 
     @Test
@@ -24,7 +24,8 @@ public class FunRideTest {
         funRide.accept("MountainBike");
         funRide.accept("MountainBike");
         funRide.accept("MountainBike");
-        System.out.println(funRide.getCountForType("MountainBike"));
+        assertEquals(funRide.getCountForType("MountainBike"), 2);
+        
     }
 
     @Test
@@ -34,8 +35,7 @@ public class FunRideTest {
         funRide.accept("RoadBike");
         funRide.accept("RoadBike");
         funRide.accept("RoadBike");
-        funRide.accept("RoadBike");
-        System.out.println(funRide.getCountForType("RoadBike"));
+        assertEquals(funRide.getCountForType("RoadBike"), 4);
     }
 
     @Test
@@ -52,14 +52,13 @@ public class FunRideTest {
         funRide.accept("Tandem");
         funRide.accept("RoadBike");
         funRide.accept("MountainBike");
-        System.out.println(funRide.getEnteredCount());
         assertEquals(funRide.getEnteredCount(), 10);
     }
-    @Test
 
-    public void shouldTestAllCount2(){
+    @Test
+    public void shouldTestAllCount2() {
         FunRide funRide = new FunRide(2);
         funRide.accept("Tandem");
-        assertEquals(funRide.getEnteredCount(),1);
+        assertEquals(funRide.getEnteredCount(), 1);
     }
 }
