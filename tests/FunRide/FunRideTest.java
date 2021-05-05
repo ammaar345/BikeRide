@@ -1,4 +1,4 @@
-package FunRideTest;
+package FunRide;
 
 import org.junit.jupiter.api.Test;
 import Rides.FunRide;
@@ -25,7 +25,7 @@ public class FunRideTest {
         funRide.accept("MountainBike");
         funRide.accept("MountainBike");
         assertEquals(funRide.getCountForType("MountainBike"), 2);
-        
+
     }
 
     @Test

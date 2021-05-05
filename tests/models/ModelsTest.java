@@ -1,4 +1,4 @@
-package BicycleTest;
+package models;
 
 //import bicycles.Bicycle;
 
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BikeRideTest {
+public class ModelsTest {
     @Test
     public void shouldTestAcceleratingAndBrakingRoadBike() {
         RoadBike roadBike = new RoadBike();
@@ -79,23 +79,24 @@ public class BikeRideTest {
         tandem.accelerate();
         assertEquals(tandem.currentSpeed(), 29);
     }
-@Test
+
+    @Test
     public void shouldTestTandemAccelerate() {
         Tandem tandem = new Tandem();
         tandem.accelerate();
         tandem.accelerate();
         tandem.accelerate();
-assertEquals(tandem.currentSpeed(),36);
+        assertEquals(tandem.currentSpeed(), 36);
     }
 
-@Test
-    public void shouldTestTandemStop(){
-Tandem tandem=new Tandem();
-tandem.accelerate();
-tandem.brake();
-tandem.accelerate();
-tandem.brake();
-tandem.stop();
-assertEquals(tandem.currentSpeed(),0);
+    @Test
+    public void shouldTestTandemStop() {
+        Tandem tandem = new Tandem();
+        tandem.accelerate();
+        tandem.brake();
+        tandem.accelerate();
+        tandem.brake();
+        tandem.stop();
+        assertEquals(tandem.currentSpeed(), 0);
     }
 }
