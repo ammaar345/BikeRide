@@ -18,11 +18,12 @@ public class FunRide {
 
     public void accept(String bikeSelected) {
         //push bikeselected into the arraylist
-        bikeList.add(bikeSelected);
+
         if (bikeCount < maxBikes) {
+            bikeList.add(bikeSelected);
             bikeCount++;
         } else {
-            return;
+            bikeCount = bikeCount;
         }
 
 
@@ -34,19 +35,21 @@ public class FunRide {
         for (int i = 0; i < bikeList.size(); i++) {
             if (typeOfBike == "Tandem") {
                 specificBikeList.add(typeOfBike);
-                return specificBikeList.size();
+                //   return specificBikeList.size();
             }
 
             if (typeOfBike == "RoadBike") {
                 specificBikeList.add(typeOfBike);
-                return specificBikeList.size();
+                //  return specificBikeList.size();
             }
             if (typeOfBike == "MountainBike") {
                 specificBikeList.add(typeOfBike);
 
             }
+
         }
         return specificBikeList.size();
+
     }
 
     public int getEnteredCount() {
