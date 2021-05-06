@@ -1,18 +1,22 @@
-package Rides;
+package rides;
 
 import bicycles.BikeRide;
 import models.Bicycle;
 
-public class BikeRideThree implements BikeRide {
+public class BikeRideOne implements BikeRide {
     private Bicycle bicycle;
-    public BikeRideThree (Bicycle bicycle) {
-        this.bicycle = bicycle;
+
+    public BikeRideOne(Bicycle bicycle) {
+
+        this.bicycle= bicycle;
     }
+
     public void ride(Bicycle bicycle) {
         bicycle.accelerate();
         bicycle.accelerate();
+        bicycle.accelerate();
         bicycle.brake();
-        bicycle.stop();
+        bicycle.accelerate();
 
     }
 
@@ -21,7 +25,8 @@ public class BikeRideThree implements BikeRide {
     public void ride() {
         bicycle.accelerate();
         bicycle.accelerate();
+        bicycle.accelerate();
         bicycle.brake();
-        bicycle.stop();
+        bicycle.accelerate();
     }
 }

@@ -1,4 +1,4 @@
-package Rides;
+package rides;
 
 import bicycles.BicycleType;
 
@@ -8,36 +8,36 @@ public class FunRide {
     public int bikeCount;
     public int maxBikes;
     public int bikeCountForType;
-    private List<String> bikeList = new ArrayList<String>();
+    private List<Object> bikeList = new ArrayList<Object>();
 
     public FunRide(int max) {
         this.maxBikes = max;
     }
 
 
-    public void accept(String bikeSelected) {
+    public void accept(BicycleType bicycleType) {
         if (bikeCount < maxBikes) {
             //push bikeSelected into the arraylist
-            bikeList.add(bikeSelected);
+            bikeList.add(bicycleType);
             bikeCount++;
         } else {
             bikeCount = bikeCount;
         }
     }
 
-    public int getCountForType(String typeOfBike) {
+    public int getCountForType(BicycleType bicycleType) {
 //
         List specificBikeList = new ArrayList<String>();
         for (int i = 0; i < bikeList.size(); i++) {
-            if (typeOfBike == "Tandem") {
-                specificBikeList.add(typeOfBike);
+            if (bicycleType == BicycleType.Tandem) {
+                specificBikeList.add(bicycleType);
             }
 
-            if (typeOfBike == "RoadBike") {
-                specificBikeList.add(typeOfBike);
+            if (bicycleType == BicycleType.RoadBike) {
+                specificBikeList.add(bicycleType);
             }
-            if (typeOfBike == "MountainBike") {
-                specificBikeList.add(typeOfBike);
+            if (bicycleType == BicycleType.MountainBike) {
+                specificBikeList.add(bicycleType);
             }
 
         }
