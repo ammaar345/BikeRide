@@ -8,18 +8,8 @@ public class BikeRideOne implements BikeRide {
 
     public BikeRideOne(Bicycle bicycle) {
 
-        this.bicycle= bicycle;
+        this.bicycle = bicycle;
     }
-
-    public void ride(Bicycle bicycle) {
-        bicycle.accelerate();
-        bicycle.accelerate();
-        bicycle.accelerate();
-        bicycle.brake();
-        bicycle.accelerate();
-
-    }
-
 
     @Override
     public void ride() {
