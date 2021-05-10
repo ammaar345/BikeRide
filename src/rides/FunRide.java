@@ -27,7 +27,7 @@ public class FunRide {
 
         public int getCountForType(BicycleType bicycleType) {
 //
-        List<Object> specificBikeList = new ArrayList<Object>();
+        List <Object>specificBikeList = new ArrayList<Object>();
         for (int i = 0; i < bikeList.size(); i++) {
             if (bicycleType == BicycleType.Tandem) {
                 specificBikeList.add(bicycleType);

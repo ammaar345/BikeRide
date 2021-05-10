@@ -1,4 +1,5 @@
 package rides;
+
 import bicycles.BicycleType;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +11,7 @@ import bicycles.*;
 public class RidesTest {
     @Test
     public void shouldTestRideOneRoadBk() {
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4,BicycleType.RoadBike);
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
         Bicycle bicycle = new BicycleFromSpec(roadBikeSpec);
 
 
@@ -21,7 +22,7 @@ public class RidesTest {
 
     @Test
     public void shouldTestRideTwoRoadBk() {
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4,BicycleType.RoadBike);
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
         Bicycle bicycle = new BicycleFromSpec(roadBikeSpec);
         BikeRideTwo bikeRideTwo = new BikeRideTwo(bicycle);
         bikeRideTwo.ride();
@@ -39,7 +40,7 @@ public class RidesTest {
 
     @Test
     public void shouldTestRideOneMtBk() {
-        BicycleSpecification mtBikeSpec = new BicycleSpecification(5, 3,BicycleType.MountainBike);
+        BicycleSpecification mtBikeSpec = new BicycleSpecification(5, 3, BicycleType.MountainBike);
         Bicycle bicycle = new BicycleFromSpec(mtBikeSpec);
         BikeRideOne bikeRideOne = new BikeRideOne(bicycle);
         bikeRideOne.ride();
@@ -50,7 +51,7 @@ public class RidesTest {
     public void shouldTestRideTwoMtBk() {
 
 
-        BicycleSpecification mtBikeSpec = new BicycleSpecification(5, 3,BicycleType.MountainBike);
+        BicycleSpecification mtBikeSpec = new BicycleSpecification(5, 3, BicycleType.MountainBike);
         Bicycle bicycle = new BicycleFromSpec(mtBikeSpec);
         BikeRideTwo bikeRideTwo = new BikeRideTwo(bicycle);
         bikeRideTwo.ride();
@@ -60,7 +61,7 @@ public class RidesTest {
     @Test
     public void shouldTestRideThreeMtBk() {
 
-        BicycleSpecification mtBikeSpec = new BicycleSpecification(5, 3,BicycleType.MountainBike);
+        BicycleSpecification mtBikeSpec = new BicycleSpecification(5, 3, BicycleType.MountainBike);
         Bicycle bicycle = new BicycleFromSpec(mtBikeSpec);
         BikeRideThree bikeRideThree = new BikeRideThree(bicycle);
         bikeRideThree.ride();
@@ -69,25 +70,27 @@ public class RidesTest {
 
     @Test
     public void shouldTestRideOneTandem() {
-        BicycleSpecification tandemBike = new BicycleSpecification(12, 7,BicycleType.Tandem);
+        BicycleSpecification tandemBike = new BicycleSpecification(12, 7, BicycleType.Tandem);
         Bicycle bicycle = new BicycleFromSpec(tandemBike);
         BikeRideOne bikeRideOne = new BikeRideOne(bicycle);
         bikeRideOne.ride();
         assertEquals(bicycle.currentSpeed(), 41);
     }
-//
+
+    //
     @Test
     public void shouldTestRideTwoTandem() {
-        BicycleSpecification tandemBike = new BicycleSpecification(12, 7,BicycleType.Tandem);
+        BicycleSpecification tandemBike = new BicycleSpecification(12, 7, BicycleType.Tandem);
         Bicycle bicycle = new BicycleFromSpec(tandemBike);
         BikeRideTwo bikeRideTwo = new BikeRideTwo(bicycle);
         bikeRideTwo.ride();
         assertEquals(bicycle.currentSpeed(), 60);
     }
-//
+
+    //
     @Test
     public void shouldTestRideThreeTandem() {
-        BicycleSpecification tandemBike = new BicycleSpecification(12, 7,BicycleType.Tandem);
+        BicycleSpecification tandemBike = new BicycleSpecification(12, 7, BicycleType.Tandem);
         Bicycle bicycle = new BicycleFromSpec(tandemBike);
         BikeRideThree bikeRideThree = new BikeRideThree(bicycle);
         bikeRideThree.ride();
