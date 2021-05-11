@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SpecificationTest {
     @Test
     public void shouldTestAccelerateMtBike() {
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(5, 3, BicycleType.MountainBike);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(5, 3, BicycleType.mountainBike);
         Bicycle mountainBike = new BicycleFromSpec(bicycleSpecification);
         mountainBike.accelerate();
         mountainBike.accelerate();
@@ -22,17 +22,17 @@ public class SpecificationTest {
 
     @Test
     public void shouldTestBrakeMtBike() {
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(5, 3, BicycleType.MountainBike);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(5, 3, BicycleType.mountainBike);
         Bicycle mountainBike = new BicycleFromSpec(bicycleSpecification);
         mountainBike.accelerate();
         mountainBike.accelerate();
         mountainBike.brake();
-        assertEquals(mountainBike.currentSpeed(), 13);
+        assertEquals(mountainBike.currentSpeed(), 7);
     }
 
     @Test
     public void shouldTestStopMtBike() {
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(5, 3, BicycleType.MountainBike);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(5, 3, BicycleType.mountainBike);
         Bicycle mountainBike = new BicycleFromSpec(bicycleSpecification);
         mountainBike.accelerate();
         mountainBike.accelerate();
@@ -43,7 +43,7 @@ public class SpecificationTest {
 
     @Test
     public void shouldTestAccelerateRdBike() {
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(11, 4, BicycleType.RoadBike);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(11, 4, BicycleType.roadBike);
         Bicycle roadBike = new BicycleFromSpec(bicycleSpecification);
         roadBike.accelerate();
         roadBike.accelerate();
@@ -54,7 +54,7 @@ public class SpecificationTest {
 
     @Test
     public void shouldTestBrakeRdBike() {
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(11, 4, BicycleType.RoadBike);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(11, -4, BicycleType.roadBike);
         Bicycle roadBike = new BicycleFromSpec(bicycleSpecification);
         roadBike.accelerate();
         roadBike.accelerate();
@@ -64,7 +64,7 @@ public class SpecificationTest {
 
     @Test
     public void shouldTestStopRdBike() {
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(11, 4, BicycleType.RoadBike);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(11, -4, BicycleType.roadBike);
         Bicycle roadBike = new BicycleFromSpec(bicycleSpecification);
         roadBike.accelerate();
         roadBike.brake();
@@ -74,7 +74,7 @@ public class SpecificationTest {
 
     @Test
     public void shouldTestAccelerateTandem() {
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(12, 7, BicycleType.Tandem);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(12, -7, BicycleType.tandem);
         Bicycle tandem = new BicycleFromSpec(bicycleSpecification);
         tandem.accelerate();
         tandem.accelerate();
@@ -85,18 +85,19 @@ public class SpecificationTest {
     @Test
     public void shouldTestBrakeTandem() {
 
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(12, 7, BicycleType.Tandem);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(12, 7, BicycleType.tandem);
         Bicycle tandem = new BicycleFromSpec(bicycleSpecification);
         tandem.accelerate();
         tandem.brake();
+        tandem.brake();
         tandem.accelerate();
-        assertEquals(tandem.currentSpeed(), 31);
+        assertEquals(tandem.currentSpeed(), 10);
     }
 
     @Test
     public void shouldTestStopTandem() {
 
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(12, 7, BicycleType.Tandem);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(12, 7, BicycleType.tandem);
         Bicycle tandem = new BicycleFromSpec(bicycleSpecification);
         tandem.accelerate();
         tandem.stop();

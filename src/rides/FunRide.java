@@ -1,6 +1,7 @@
 package rides;
 
 import bicycles.BicycleType;
+import models.*;
 
 import java.util.*;
 
@@ -15,10 +16,10 @@ public class FunRide {
     }
 
 
-    public void accept(BicycleType bicycleType) {
+    public void accept(Bicycle bicycle) {
         if (bikeCount < maxBikes) {
             //push bikeSelected into the arraylist
-            bikeList.add(bicycleType);
+            bikeList.add(bicycle);
             bikeCount++;
         } else {
             bikeCount = bikeCount;
@@ -29,14 +30,14 @@ public class FunRide {
 //
         List <Object>specificBikeList = new ArrayList<Object>();
         for (int i = 0; i < bikeList.size(); i++) {
-            if (bicycleType == BicycleType.Tandem) {
+            if (bicycleType == BicycleType.tandem) {
                 specificBikeList.add(bicycleType);
             }
 
-            if (bicycleType == BicycleType.RoadBike) {
+            if (bicycleType == BicycleType.roadBike) {
                 specificBikeList.add(bicycleType);
             }
-            if (bicycleType == BicycleType.MountainBike) {
+            if (bicycleType == BicycleType.mountainBike) {
                 specificBikeList.add(bicycleType);
             }
 

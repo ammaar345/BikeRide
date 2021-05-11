@@ -12,6 +12,6 @@ public class Tandem extends BicycleBase {
 
 //    @Override
     public BicycleType getBicycleType() {
-        return BicycleType.Tandem;
+        return BicycleType.tandem;
     }
 }

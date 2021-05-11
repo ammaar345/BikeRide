@@ -6,6 +6,7 @@ public abstract class BicycleBase implements Bicycle {
     private int speed;
 
     protected void changeSpeed(int speedFactor) {
+
         speed = speed + speedFactor;
 
     }
@@ -16,7 +17,10 @@ public abstract class BicycleBase implements Bicycle {
     }
 
     public int currentSpeed() {
-
-        return speed;
+        if (speed < 0) {
+            return 0;
+        } else {
+            return speed;
+        }
     }
 }
