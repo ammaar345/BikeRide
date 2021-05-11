@@ -8,7 +8,6 @@ import java.util.*;
 public class FunRide {
     public int bikeCount;
     public int maxBikes;
-    public int bikeCountForType;
     private List<Object> bikeList = new ArrayList<Object>();
 
     public FunRide(int max) {
