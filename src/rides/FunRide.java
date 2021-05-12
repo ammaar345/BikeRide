@@ -38,7 +38,7 @@ public class FunRide {
     }
 
     public int getEnteredCount() {
-        return bikeCount;
+        return bikeList.size();
     }
 
 }
