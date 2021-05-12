@@ -1,14 +1,16 @@
 package rides;
 
+import bicycles.BicycleSpecification;
 import bicycles.BicycleType;
 import models.*;
+import bicycles.BicycleFromSpec;
 
 import java.util.*;
 
 public class FunRide {
     public int bikeCount;
     public int maxBikes;
-    private List<Object> bikeList = new ArrayList<Object>();
+    private ArrayList<Bicycle> bikeList = new ArrayList<>();
 
     public FunRide(int max) {
         this.maxBikes = max;
@@ -16,32 +18,22 @@ public class FunRide {
 
 
     public void accept(Bicycle bicycle) {
-        if (bikeCount < maxBikes) {
+        if (bikeCount < maxBikes /*&& !bikeList.contains(bicycle)*/) {
             //push bikeSelected into the arraylist
             bikeList.add(bicycle);
             bikeCount++;
-        } else {
-            bikeCount = bikeCount;
         }
     }
 
-        public int getCountForType(BicycleType bicycleType) {
-//
-        List <Object>specificBikeList = new ArrayList<Object>();
-        for (int i = 0; i < bikeList.size(); i++) {
-            if (bicycleType == BicycleType.tandem) {
-                specificBikeList.add(bicycleType);
-            }
+    public int getCountForType(BicycleType bicycleType) {
 
-            if (bicycleType == BicycleType.roadBike) {
-                specificBikeList.add(bicycleType);
+        int specificBikeList = 0;
+        for (Bicycle bicycle : bikeList) {
+            if (bicycleType == bicycle.getBicycleType()) {
+                specificBikeList++;
             }
-            if (bicycleType == BicycleType.mountainBike) {
-                specificBikeList.add(bicycleType);
-            }
-
         }
-        return specificBikeList.size();
+        return specificBikeList;
 
     }
 

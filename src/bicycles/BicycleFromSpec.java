@@ -6,9 +6,9 @@ import bicycles.BicycleFromSpec;
 public class BicycleFromSpec extends BicycleBase {
     BicycleSpecification bicycleSpecification;
 
-    public BicycleFromSpec(BicycleSpecification bicycle) {
+    public BicycleFromSpec(BicycleSpecification bicycleSpecification) {
 
-        this.bicycleSpecification = bicycle;
+        this.bicycleSpecification = bicycleSpecification;
 
     }
 
@@ -29,4 +29,5 @@ public class BicycleFromSpec extends BicycleBase {
     public BicycleType getBicycleType() {
         return this.bicycleSpecification.getBicycleType();
     }
+
 }

@@ -74,7 +74,7 @@ public class SpecificationTest {
 
     @Test
     public void shouldTestAccelerateTandem() {
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(12, -7, BicycleType.tandem);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(12, 7, BicycleType.tandem);
         Bicycle tandem = new BicycleFromSpec(bicycleSpecification);
         tandem.accelerate();
         tandem.accelerate();
